@@ -1,10 +1,6 @@
-keras
-streamlit
-opencv-python
-pillow
-numpy
-pandas
-tensorflow
-streamlit-option-menu
-secure-smtplib
-pickle5
+keras==3.9.0
+numpy==2.2.3
+opencv_python==4.11.0.86
+Pillow==11.1.0
+streamlit==1.43.0
+streamlit_option_menu==0.4.0
