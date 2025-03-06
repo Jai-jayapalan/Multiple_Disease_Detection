@@ -1,9 +1,11 @@
 keras
-pickle
+pickle-mixin
 streamlit
-cv2
-PIL
+opencv-python
+pillow
 numpy
 pandas
 tensorflow
-scikit-learn
+streamlit-option-menu
+secure-smtplib
+pickle5
