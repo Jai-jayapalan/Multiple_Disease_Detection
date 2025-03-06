@@ -5,7 +5,7 @@ from PIL import Image
 import os
 
 Alzemeir_Model = ''
-Alzemeir_Model = load_model('models/Alzeimer_model.h5')
+Alzemeir_Model = load_model('./models/Alzeimer_model.h5')
 
 def get_classname1(classNo):
     if (classNo==0):

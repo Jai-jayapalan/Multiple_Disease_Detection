@@ -6,7 +6,7 @@ import pickle
 import os
 
 BrainTumor_Model = ''
-BrainTumor_Model = load_model('models/BrainTumor.h5')
+BrainTumor_Model = load_model('./models/BrainTumor.h5')
 
 # DeepLearning models
 

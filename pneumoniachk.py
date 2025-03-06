@@ -5,7 +5,7 @@ import numpy as np
 from PIL import Image
 
 Pneumonia_Model = ''
-Pneumonia_Model = load_model('models/pneumonia_model.h5')
+Pneumonia_Model = load_model('./models/pneumonia_model.h5')
 
 def preprocess_image(img_path):
     img = image.load_img(img_path, target_size=(150, 150))
