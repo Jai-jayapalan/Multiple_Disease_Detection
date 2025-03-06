@@ -1,5 +1,4 @@
 keras
-pickle-mixin
 streamlit
 opencv-python
 pillow
