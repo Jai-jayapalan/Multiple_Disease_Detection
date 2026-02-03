@@ -1,5 +1,5 @@
 import cv2
-from keras._tf_keras.keras.models import load_model
+from tensorflow.keras.models import load_model
 from keras._tf_keras.keras.preprocessing import image
 import numpy as np
 from PIL import Image

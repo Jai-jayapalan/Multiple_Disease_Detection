@@ -1,4 +1,4 @@
-from keras._tf_keras.keras.models import load_model
+from tensorflow.keras.models import load_model
 import cv2
 import numpy as np
 from PIL import Image

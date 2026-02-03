@@ -1,13 +1,17 @@
 import smtplib
+import os
+from dotenv import load_dotenv
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 
+load_dotenv()
+
 def send_email(message, to_email, image_path):
     # Email setup
-    from_email = "jaijayathilak@gmail.com"
-    from_password = "pexj wxdp thxc kgas"
-
+    from_email = os.getenv("EMAIL_USER")
+    from_password = os.getenv("EMAIL_PASS")
+    
     # Create message container
     msg = MIMEMultipart()
     msg['From'] = from_email
@@ -36,9 +40,11 @@ def send_email(message, to_email, image_path):
         # Terminate the SMTP session and close the connection
         server.quit()
         
-        print("Successfully sent email to %s:" % (msg['To']))
+        # print("Successfully sent email to %s:" % (msg['To']))
+        return True
     except smtplib.SMTPException as e:
-        print("Error: unable to send email. Error detail:", e)
+        # print("Error: unable to send email. Error detail:", e)
+        return False
         
 def sends_email(message, to_email):
     # Email setup
@@ -67,9 +73,11 @@ def sends_email(message, to_email):
         # Terminate the SMTP session and close the connection
         server.quit()
         
-        print("Successfully sent email to %s:" % (msg['To']))
+        # print("Successfully sent email to %s:" % (msg['To']))
+        return True
     except smtplib.SMTPException as e:
-        print("Error: unable to send email. Error detail:", e)
+        # print("Error: unable to send email. Error detail:", e)
+        return False
 
 # Example usage
 # send_email("Hello, this is a test email.", "jayjayathilak@gmail.com", "./media/patient00085_study1_view1_frontal.jpg")
